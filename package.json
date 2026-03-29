@@ -1,0 +1,21 @@
+{
+  "name": "node-restful-api-secure",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Muhammed Suhail",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.3.3"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
