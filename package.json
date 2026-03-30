@@ -7,14 +7,18 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./index.js --exec babel-node -e js"
   },
   "dependencies": {
     "body-parser": "^2.2.2",
     "express": "^5.2.1",
-    "mongoose": "^9.3.3"
+    "mongoose": "^9.3.3",
+    "nodemon": "^3.1.14"
   },
   "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/node": "^7.29.0",
+    "@babel/preset-env": "^7.29.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1"
   }

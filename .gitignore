@@ -3,3 +3,5 @@ node_modules/
 
 # Optional: also ignore lockfile if you want (but usually you commit it)
 # package-lock.json
+
+ExerciseFiles/
