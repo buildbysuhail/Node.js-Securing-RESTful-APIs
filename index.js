@@ -16,6 +16,19 @@ mongoose.connect('mongodb://127.0.0.1:27017/CRMdb')
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// JWT setup
+app.use((req, res, next) => {
+    if (req.headers && req.headers.authorization && req.headers.authorization.split(' ')[0] 
+    === 'JWT') {
+        JsonWebTokenError.verify(req.headers.authorization.split(' ')[1], 'RESTFULAPIs',  (err,
+        decode) => {
+            if (err) req.user = undefined;
+            req.user = decode;
+            next();
+        });
+    }
+})
+
 routes(app);
 
 // serving static files
